@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class humanBob //this is the base class
+{
+public:
+	virtual void printName() 
+	{
+		cout << "I am is a proffesor Bob" << endl;
+	}
+};
+class humanRob : public humanBob //this is a class inheritor
+{
+public:
+	void printName() override
+	{
+		cout << "I am a student Rob" << endl;
+	}
+};
+
+int main()
+{ 
+	humanRob proffesor; //create class variable Rob
+	humanBob* arrHuman = &proffesor;// create a Bob class pointer, but it points to the Rob class
+	arrHuman->printName();// since class pointer Bob points to class Rob so class Rob will be executed
+	
+
+	return 0;
+}
+
